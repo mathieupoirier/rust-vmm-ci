@@ -126,7 +126,7 @@ class BuildkiteStep:
 
     def _set_hypervisor(self, hypervisor):
         """ Set hypervisor if given in the json input. """
-        supported_hypervisors = ['kvm', 'mshv']
+        supported_hypervisors = ['kvm', 'mshv', 'xen']
         if hypervisor:
             if hypervisor in supported_hypervisors:
                 self.step_config['agents']['hypervisor'] = hypervisor
